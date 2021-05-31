@@ -11,7 +11,7 @@
 # It will NOT update the description if it already begins with the blurb.
 # Thus this script will not add multiple blurbs if it is run multiple times.
 
-require 'yaml'
+require 'json'
 
 class Exercise
   attr_reader :path
@@ -33,8 +33,9 @@ class Exercise
   end
 
   def metadata
-    metadata_filename = File.join(path, 'metadata.yml')
-    YAML.load_file(metadata_filename)
+    metadata_filename = File.join(path, 'metadata.json')
+    metadata_raw = File.read(metadata_filename)
+    JSON.parse(metadata_raw)
   end
 
   def description

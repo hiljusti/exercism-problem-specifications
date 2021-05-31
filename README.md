@@ -14,22 +14,22 @@ Each exercise's metadata lives in a directory under `exercises/`.
 exercises/
 ├── accumulate
 │   ├── description.md
-│   └── metadata.yml
+│   └── metadata.json
 ├── ...
 ├── minesweeper
 │   ├── canonical-data.json
 │   ├── description.md
-│   └── metadata.yml
+│   └── metadata.json
 ├── ...
 └── zipper
     ├── description.md
-    └── metadata.yml
+    └── metadata.json
 ```
 
 There are three metadata files per exercise:
 
 - `description.md` - the basic problem description
-- `metadata.yml` - additional information about the exercise, such as where it came from
+- `metadata.json` - additional information about the exercise, such as where it came from
 - `canonical-data.json` (optional) - standardized test inputs and outputs that can be used to implement the exercise
 
 ## Test Data (canonical-data.json)
